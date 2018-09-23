@@ -9,7 +9,7 @@ I have also maintained that it helps to be hard to defend.  A hard to defend Lla
 someone who has no glaring weak field (relative to their other fields), and knows a smattering
 of esoterica that they could possibly score a 3 on a hard question at any time.
 
-So I have written a python script (publicly available  in https://github.com/wusui/ll_new_defense_rating)
+So I have written a python script (publicly available in https://github.com/wusui/ll_new_defense_rating)
 which calculates a new metric -- how many standings points is a player away from what would be expected
 if scores were based only on how many questions one got right.  A running total over an entire season
 reveals how much defense affected that person's rating.  The larger the number, the better as far
@@ -25,9 +25,9 @@ and -2 for the loser.  Defense changing a tie to a win or a loss to a tie is wor
 So I checked all the players in the Pacific rundle for LL 78.  It appears that the individual with
 the highest defensive rating has a rating of 8.  Looking at that individual's scores, he scored two
 wins on what would have been losses 6(3)-4(4) and 5(3)-4(4), won three matches that would have been
-ties 4(3)-3(3), 9(5)-8(5), and converted one potential loss into a tie 4(2)-4(3).  Using this metric,
-this person also gave up 0 defensive rating points the entire season.  Those 8 standings points are
-the difference between 1st place and 7th place in the Pacific-B rundle.
+ties 4(3)-3(3), 9(5)-8(5), and 7(4)-4(4), and converted one potential loss into a tie 4(2)-4(3).
+Using this metric, this person also gave up 0 defensive rating points the entire season.
+Those 8 standings points are the difference between 1st place and 7th place in the Pacific-B rundle.
 
 This person also lead the rundle in DE (.821), lowest UfPA (17) and lowest PCAA (1.14).  So this new
 statistic is pretty much in line with the other defensive statistics.
