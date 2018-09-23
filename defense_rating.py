@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# Copyright (c) 2018 Warren Usui, MIT License
 """
 Calculate newly created defensive statistics
 
