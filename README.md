@@ -35,7 +35,7 @@ statistic is pretty much in line with the other defensive statistics.
 I maintain that this individual should be acknowledged as the Pacific Rundle's best defensive
 player this season.
 
-So here are the results of running my script.
+An now the moment that you have been waiting for, here are the results of running my script.
 
 The highest defensive rating is: 8
     set by: usuiw
