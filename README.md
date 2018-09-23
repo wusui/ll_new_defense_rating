@@ -1,6 +1,6 @@
 Some Llamas enjoy statistics, so here's a new one.
 
-There are many defensive rating statistics but how much does your defense affect your stats?
+There are many defensive rating statistics but how much does your defense affect your standings?
 For example, let's say your opponent scored 6(3).  If you scored a 9(6) or a 0(0), your defense
 does not matter.  However, if you scored a 4(4), your defense, combined with your opponent's
 defense, changed a win into a loss.
