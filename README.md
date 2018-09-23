@@ -25,7 +25,7 @@ and -2 for the loser.  Defense changing a tie to a win or a loss to a tie is wor
 So I checked all the players in the Pacific rundle for LL 78.  It appears that the individual with
 the highest defensive rating has a rating of 8.  Looking at that individual's scores, he scored two
 wins on what would have been losses 6(3)-4(4) and 5(3)-4(4), won three matches that would have been
-ties 4(3)-3(3), 9(5)-8(5), and convert one potential loss into a tie 4(2)-4(3).  Using this metric,
+ties 4(3)-3(3), 9(5)-8(5), and converted one potential loss into a tie 4(2)-4(3).  Using this metric,
 this person also gave up 0 defensive rating points the entire season.
 
 I maintain that this individual should be acknowledged as the Pacific Rundle's best defensive
