@@ -327,9 +327,84 @@ def find_best_def(season, division):
         if answer > best_def:
             best_def = answer
             best_list = [name]
-    print("The highest defensive rating is: %d" % best_def)
-    print("    set by: %s" % ", ".join(best_list))
+    return best_def, best_list
+
+
+class GetSeasonNumber(HTMLParser):
+    """
+    Parse main page to get current season number
+    """
+    def __init__(self):
+        HTMLParser.__init__(self)
+        self.result = ''
+        
+    
+    def handle_starttag(self, tag, attrs):
+        """
+        Find first href referring to standings.php
+        """
+        if tag == 'a':
+            if attrs[0][0] == 'href':
+                if attrs[0][1].startswith("/standings.php?"):
+                    if self.result == '':
+                        self.result = attrs[0][1]
+
+
+class LeagueParse(HTMLParser):
+    """
+    Parse all league names out of a page.
+    """
+    def __init__(self):
+        HTMLParser.__init__(self)
+        self.result = []
+
+    def handle_starttag(self, tag, attrs):
+        """
+        Find hrefs referring to league names
+        """
+        if tag == 'a':
+            for apt in attrs:
+                if apt[0] == 'href':
+                    if apt[1].startswith('/standings.php?'):
+                        if '&' in apt[1]:
+                            parts = apt[1].split('&')
+                            if '_' not in parts[-1]:
+                                self.result.append(parts[-1])
+
+
+def get_current_leagues():
+    """
+    Return a list of league names ('Pacific', 'Galaxy'...), and the season
+    number (LL 78, for example)
+    """
+    ses1, _ = get_session(INPUTDATA)
+    main_data = ses1.get(LLHEADER)
+    parser1 = GetSeasonNumber()
+    parser1.feed(main_data.text)
+    season = LLHEADER + parser1.result
+    page_data = ses1.get(season)
+    parser = LeagueParse()
+    parser.feed(page_data.text)
+    return {'leagues': parser.result, 'season': parser1.result}
+
+
+def find_best_in_all_rundles():
+    """
+    Loop through all rundles to find the leader in the defense rating
+    category.  Each league is printed in a line containing the league
+    name, best defense rating value, and a list of players scoring
+    that rating.  These fields are separated by colons.
+    """
+    clinfo = get_current_leagues()
+    snumb = int(clinfo['season'].split('?')[-1])
+    for lg in clinfo['leagues']:
+        best_def, best_list = find_best_def(snumb, lg)
+        odata = [lg, "%d" % best_def, ", ".join(best_list)]
+        print(":".join(odata))
 
 
 if __name__ == "__main__":
-    find_best_def(78, 'Pacific')
+    best_def, best_list = find_best_def(78, 'Pacific')
+    print("The highest defensive rating is: %d" % best_def)
+    print("    set by: %s" % ", ".join(best_list))
+    find_best_in_all_rundles()
