@@ -22,17 +22,17 @@ that scored 4 gets one less standings point.
 The math works out to be pretty simple.  Defense changing a loss to a win is worth +2 for the winner
 and -2 for the loser.  Defense changing a tie to a win or a loss to a tie is worth +1 or -1.
 
-So I checked all the players in the Pacific rundle for LL 78.  It appears that the individual with
+So I checked all the players in the Pacific League for LL 78.  It appears that the individual with
 the highest defensive rating has a rating of 8.  Looking at that individual's scores, he scored two
 wins on what would have been losses 6(3)-4(4) and 5(3)-4(4), won three matches that would have been
 ties 4(3)-3(3), 9(5)-8(5), and 7(4)-4(4), and converted one potential loss into a tie 4(2)-4(3).
 Using this metric, this person also gave up 0 defensive rating points the entire season.
-Those 8 standings points are the difference between 1st place and 7th place in the Pacific-B rundle.
+Those 8 standings points are the difference between 1st place and 7th place in the Pacific B Rundle.
 
-This person also lead the rundle in DE (.821), lowest UfPA (17) and lowest PCAA (1.14).  So this new
-statistic is pretty much in line with the other defensive statistics.
+This person also lead the Pacific B Rundle in DE (.821), lowest UfPA (17) and lowest PCAA (1.14).
+So this new statistic is pretty much in line with the other defensive statistics.
 
-I maintain that this individual should be acknowledged as the Pacific Rundle's best defensive
+I maintain that this individual should be acknowledged as the Pacific League's best defensive
 player this season.
 
 And now the moment that you have been waiting for, here are the results of running my script.
